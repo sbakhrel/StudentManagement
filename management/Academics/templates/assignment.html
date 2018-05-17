@@ -1,0 +1,54 @@
+
+{%block home%}
+{%endblock%}
+{% block content %}
+<div class='container'>
+	<div class='row'>
+		<div class='col-md-2'></div>
+		<div class='col-md-10 pull-left'>
+			<p class="bg-info" style='font-size:20px;font-weight:bold;'>
+
+				<span class="glyphicon glyphicon-th-list"></span>
+				&nbsp;&nbsp;
+				Assignments
+			</p>
+		</div>
+	</div>
+
+		<div class='row'>
+		<div class='col-md-2'></div>
+		<div class='col-md-10 pull-left'>
+		<table class="table table-condensed">
+			<thead>
+		<tr>
+			<th>Assignment_Title</th>
+      <th>Assignment_Description</th>
+      <th>Course_name</th>
+      <th>Batch_name</th>
+      <th>Subject_code</th>
+      <th>Date_Of_Submission</th>
+		</tr>
+			</thead>
+			<tbody>
+			{% for q in query %}
+		<tr>
+
+			<td>{{q.Assignment_Title}}</td>
+      <td>{{q.Assignment_Description}}</td>
+      <td>{{q.Course_name}}</td>
+      <td>{{q.Batch_name}}</td>
+      <td>{{q.Subject_code}}</td>
+      <td>{{q.Date_Of_Submission}}</td>
+    
+		</tr>
+		{% endfor %}
+	</tbody>
+
+	</table>
+		</div>
+	</div>
+</div>
+
+
+
+{% endblock %}

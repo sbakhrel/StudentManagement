@@ -1,0 +1,67 @@
+
+{% load staticfiles %}
+
+<html>
+<head>
+	<title>Hostel</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style>
+	.navbar-default {
+    	min-height: 80px;
+    				}
+    .navbar-inverse{
+    	min-height: 90px;
+    }
+	</style>
+</head>
+	<body>
+    <!-- url(r'^hosteldetails/$',hosview.Hostel_Detail,name='Hostel_Details'),
+      url(r'^addhosteldetails/$',hosview.add_hostel_details,name='add_hostel_details'),
+      url(r'^hostelroom/$',hosview.getHostelRoom,name='Hostel_Room'),
+      url(r'^addhostelrooms/$',hosview.add_hostel_room,name='add_hostel_room'),
+      url(r'^hostelregister/$',hosview.HostelRegister,name='Hostel_Register'),
+      url(r'^addhostelregister/$',hosview.add_hostel_regester,name='add_hostel_regester'),
+      url(r'^hostelallocation/$',hosview.HostelAllocation,name='Hostel_Allocation'),
+      url(r'^addhostelallocation/$',hosview.add_hostelallocation,name='add_hostelallocation'), -->
+		<table class="table table-condensed">
+
+		<tr>
+			<td><a href="/hosteldetails">Hostel Details</a></td>
+		</tr>
+
+		<tr>
+			<td><a href="/addhosteldetails">Add Hostel Details</a></td>
+		</tr>
+
+		<tr>
+			<td><a href="/hostelroom">Hostel Rooms</a></td>
+		</tr>
+
+		<tr>
+			<td><a href="/addhostelrooms">Add Hostel Rooms</a></td>
+		</tr>
+    <tr>
+      <td><a href="/hostelregister">Hostel Register List</a></td>
+    </tr>
+
+    <tr>
+      <td><a href="/addhostelregister">Add Hostel Register</a></td>
+    </tr>
+
+    <tr>
+      <td><a href="/hostelallocation">Hostel Allocation</a></td>
+    </tr>
+
+    <tr>
+      <td><a href="/addhostelallocation">Add Hostel Allocation</a></td>
+    </tr>
+
+	</tbody>
+
+	</table>
+	</body>
+</html>

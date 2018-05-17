@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>add student form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<style type="text/css">
+  @import "font-awesome.min.css";
+@import "font-awesome-ie7.min.css";
+/* Space out content a bit */
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  padding-bottom: 19px;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* Customize container */
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+  padding: 14px 24px;
+  font-size: 21px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+</style>
+</head>
+<body><div class="container">
+    <h1 class="well">Add Student</h1>
+  <div class="col-lg-12 well">
+  <div class="row">
+        <form method="post" action="" id="contact_form" class="form-group">
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-sm-4 form-group">
+                <label>First Name</label>
+                <input type="text" placeholder="Enter First Name Here.." class="form-control" name="First_Name">
+              </div>  
+              <div class="col-sm-4 form-group">
+                <label>Middle Name</label>
+                <input type="text" placeholder="Enter Middle Name Here.." class="form-control" name="Middle_Name">
+              </div>  
+              <div class="col-sm-4 form-group">
+                <label>Family Name</label>
+                <input type="text" placeholder="Enter Family Here.." class="form-control" name="Family_name">
+              </div>    
+            </div>
+            <div class="row">
+              <div class="col-sm-6 form-group">
+                <label>Birth Place</label>
+                <input type="text" placeholder="Enter birth place Here.." class="form-control" name="Birth_place">
+              </div>    
+              <div class="col-sm-3 form-group">
+                <label>Date of birth</label>
+                <input type="text" placeholder="Enter Dob Here.." class="form-control" name="Date_of_birth">
+              </div> 
+
+              <div class="col-sm-3 form-group">
+               <label>Gender</label>
+              <select name="gender_choices" class="form-control selectpicker">
+        <option value="">Please select </option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+        <option>Prefer not to specify</option>
+            </select>
+                        </div>   
+            </div> 
+
+            <div class="form-group">
+              <label>Address</label>
+              <textarea placeholder="Enter Address Here.." rows="3" class="form-control" name="address"></textarea>
+            </div>  
+            <div class="row">
+              <div class="col-sm-4 form-group">
+                <label>City</label>
+                <input type="text" placeholder="Enter City Name Here.." class="form-control" name="city">
+              </div>  
+              <div class="col-sm-4 form-group">
+                <label>State</label>
+                <select name="state_choices" class="form-control selectpicker">
+        <option value="">Please select </option>
+        <option>State-1</option>
+        <option>State-2</option>
+        <option>State-3</option>
+        <option>State-4</option>
+        <option>State-5</option>
+        <option>State-6</option>
+        <option>State-7</option>
+            </select>
+              </div>  
+              <div class="col-sm-4 form-group">
+                <label>Zip</label>
+                <input type="text" name="zip" placeholder="Enter Zip Code Here.." class="form-control">
+              </div>    
+            </div>
+
+          <div class="row">
+              <div class="col-sm-6 form-group">
+                <label>Mobile</label>
+                <input type="number" name="mobile" placeholder="Enter mobile number Here.." class="form-control">
+              </div>    
+              <div class="col-sm-6 form-group">
+                <label>Phone Number</label>
+                <input type="number" name="phone" placeholder="Enter Phone Number Here.." class="form-control">
+              </div>  
+            </div> 
+            <div class="row">
+              <div class="col-sm-4 form-group">
+                <label>Nationality</label>
+                <input type="text"  name="Nationality" placeholder="Enter nationality Here.." class="form-control">
+              </div>  
+              <div class="col-sm-4 form-group">
+                <label>Mother tongue</label>
+                <input type="text" name="mother_tongue" placeholder="Enter mother tounge Here.." class="form-control">
+              </div>  
+              <div class="col-sm-4 form-group">
+                <label>Religion</label>
+                <select name="religion_choices" class="form-control selectpicker">
+        <option value="">Please select </option>
+        <option>Hindusim</option>
+        <option>Buddhism</option>
+        <option>Islam</option>
+        <option>Christanity</option>
+        <option>Muslim</option>
+        <option>Other</option>
+            </select>
+              </div>    
+            </div> 
+            <div class="form-group">
+            <label>Email Address</label>
+            <input type="text" name="email"  placeholder="Enter Email Address Here.." class="form-control">
+          </div>     
+            <div class="row">
+              <div class="col-sm-4 form-group">
+                <label>Country</label>
+                <input type="text"  name="country" placeholder="Enter Country Here.." class="form-control">
+              </div>  
+              <div class="col-sm-4 form-group">
+                <label>National Identity card type</label>
+                <input type="text" name="National_Identity_card_type"  placeholder="Enter National Identity Here.." class="form-control">
+              </div>  
+              <div class="col-sm-4 form-group">
+                <label>National ID Card Number</label>
+                <input type="text" name="National_ID_Card_Number" placeholder="Enter National Id Card Here.." class="form-control">
+              </div>    
+            </div>
+<div class="row">
+              <div class="col-sm-4 form-group">
+                <label>Blood Group</label>
+                <select name="blood_choices" class="form-control selectpicker">
+        <option value="">Please select </option>
+        <option>A+</option>
+        <option>A-</option>
+        <option>AB+</option>
+        <option>AB-</option>
+        <option>B+</option>
+        <option>B-</option>
+        <option>O+</option>
+        <option>O-</option>
+            </select>
+              </div>  
+              <div class="col-sm-4 form-group">
+                <label>Faculty</label>
+                <select name="faculty" class="form-control selectpicker" id="faculty">
+          </select>
+<script>
+let dropdown = $('#faculty');
+
+dropdown.empty();
+
+dropdown.append('<option selected="true" disabled>Choose Faculty</option>');
+dropdown.prop('selectedIndex', 0);
+
+const url = 'http://127.0.0.1:8000/facultylistapi';
+
+// Populate dropdown with list of provinces
+$.getJSON(url, function (data) {
+
+  // Object.values(data).map(function(v)){
+  //   v['id']
+  // }
+  $.each(data, function (key, entry) {
+    dropdown.append($('<option></option>').attr('value', entry.id).text(entry.Faculty));
+  })
+});
+</script>  
+    </div>  
+              <div class="col-sm-4 form-group">
+                <label>Grade</label>
+<select name="grade" class="form-control selectpicker" id="grade" class="grade">
+          </select>
+<script>
+let dropdown = $('#grade');
+
+dropdown.empty();
+
+dropdown.append('<option selected="true" disabled>Choose Grade</option>');
+dropdown.prop('selectedIndex', 0);
+
+const url = 'http://127.0.0.1:8000/gradelistapi';
+
+// Populate dropdown with list of provinces
+$.getJSON(url, function (data) {
+
+  // Object.values(data).map(function(v)){
+  //   v['id']
+  // }
+  $.each(data, function (key, entry) {
+    dropdown.append($('<option></option>').attr('value', entry.id).text(entry.grade));
+  })
+});
+</script>              </div>    
+              </div> 
+
+          <div class="form-group">
+            <label>Permanent Address</label>
+            <input type="text"  name="" placeholder="Enter Permanent Address Here.." class="form-control">
+          </div>    
+          
+          <div class="form-group">
+            <label>Latest Qualification</label>
+            <input type="text"  name="" placeholder="Enter qualification Here.." class="form-control">
+          </div>
+          <div class="row">
+              <div class="col-sm-4 form-group">
+                <label>Father Name</label>
+                <input type="text" name="" placeholder="Enter Father Name Here.." class="form-control">
+              </div>  
+              <div class="col-sm-4 form-group">
+                <label>Father Contact Number</label>
+                <input type="number"  name=""placeholder="Enter Father Contact Here.." class="form-control">
+              </div>  
+              <div class="col-sm-4 form-group">
+                <label>Father Profession</label>
+                <input type="text" name=""  placeholder="Enter father Profession" class="form-control">
+              </div>    
+            </div>
+<div class="form-group">
+            <label>Fathers National ID Card Number:</label>
+            <input type="number"  name="" placeholder="Enter Father id  Number Here.." class="form-control">
+            </div>
+<div class="row">
+              <div class="col-sm-4 form-group">
+                <label>Mother Name</label>
+                <input type="text" name="mother_name" placeholder="Enter Mother Name Here.." class="form-control">
+              </div>  
+              <div class="col-sm-4 form-group">
+                <label>Mother Contact Number</label>
+                <input type="number" name="mother_contact_no" placeholder="Enter Mother Contact Here.." class="form-control">
+              </div>  
+              <div class="col-sm-4 form-group">
+                <label>Mother Profession</label>
+                <input type="text"  name="mother_profession" placeholder="Enter Mother Profession" class="form-control">
+              </div>    
+              </div>
+              <div class="form-group">
+            <label>Mother National ID Card Number:</label>
+            <input type="number"  name="mother_national_id_card_no" placeholder="Enter Mother id  Number Here.." class="form-control">
+            </div>
+
+          <div class="row">
+              <div class="col-sm-4 form-group">
+                <label>Local Parents Name</label>
+                <input type="text" name="local_parents_name" placeholder="Enter local parents name Here.." class="form-control">
+              </div>  
+              <div class="col-sm-4 form-group">
+                <label>Local Parents Profession</label>
+                <input type="number" name="local_parent_profession" placeholder="Enter local parents Profession  Here.." class="form-control">
+              </div>  
+              <div class="col-sm-4 form-group">
+                <label>Relationship</label>
+                <input type="text"  name="relationships" placeholder="Enter Relationship" class="form-control">
+              </div>    
+              </div> 
+              <div class="row">
+              <div class="col-sm-6 form-group">
+                <label>Previous school Name</label>
+                <input type="text" name="previous_school_name" placeholder="Enter Previous school name Here.." class="form-control">
+              </div>    
+              <div class="col-sm-6 form-group">
+                <label> Previous school Address</label>
+                <input type="text" name="previous_school_address" placeholder="Enter Previous school  address Here.." class="form-control">
+              </div>  
+            </div>   
+
+         <div class="row">
+              <div class="col-sm-4 form-group">
+                <label>Income</label>
+                <input type="text"  name="income" placeholder="Enter  income Here.." class="form-control">
+              </div>  
+              <div class="col-sm-4 form-group">
+                <label>Hostel</label>
+                <select name="hostel"  class="form-control selectpicker">
+        <option value="">Please select </option>
+        <option>Day</option>
+        <option>Full</option>
+        <option>No</option>
+            </select>
+              </div>  
+              <div class="col-sm-4 form-group">
+                <label>Transportation</label>
+                <select name="transportation" class="form-control selectpicker">
+        <option value="">Please select </option>
+        <option>Yes</option>
+        <option>No</option>
+            </select>
+              </div>    
+              </div> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit"  class="btn btn-warning" >&nbsp;&nbsp;&nbsp;&nbsp;SUBMIT &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+<!--           <button type="button" class="btn btn-lg btn-info">Submit</button>         
+ -->          </div>
+        </form> 
+        </div>
+  </div>
+  </div>
+  <script type="text/javascript">
+        $(document).ready(function() {
+    $('#contact_form').bootstrapValidator({
+        // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
+        feedbackIcons: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+          faculty: {
+                validators: {
+                     stringLength: {
+                        min: 2,
+                    },
+                    notEmpty: {
+                        message: 'Please supply name'
+                    }
+                }
+            }
+        }
+        .on('success.form.bv', function(e) {
+            $('#success_message').slideDown({ opacity: "show" }, "slow") // Do something ...
+                $('#contact_form').data('bootstrapValidator').resetForm();
+
+            // Prevent form submission
+            e.preventDefault();
+
+            // Get the form instance
+            var $form = $(e.target);
+
+            // Get the BootstrapValidator instance
+            var bv = $form.data('bootstrapValidator');
+
+            // Use Ajax to submit form data
+            $.post($form.attr('action'), $form.serialize(), function(result) {
+                console.log(result);
+            }, 'json');
+        });
+});
+
+ // For getting CSRF token
+
+function getCookie(name) {
+       var cookieValue = null;
+       if (document.cookie && document.cookie != '') {
+         var cookies = document.cookie.split(';');
+         for (var i = 0; i < cookies.length; i++) {
+         var cookie = jQuery.trim(cookies[i]);
+         // Does this cookie string begin with the name we want?
+         if (cookie.substring(0, name.length + 1) == (name + '=')) {
+             cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+             break;
+          }
+     }
+ }
+ return cookieValue;
+}
+
+
+//For doing AJAX post
+ $(".btn btn-warning").click(function(e) {
+
+ e.preventDefault();
+
+ var csrftoken = getCookie('csrftoken');
+ var First_Name = $('.First_Name').val();
+ var Middle_Name = $('.Middle_Name').val();
+ var Family_name = $('.Family_name').val();
+ var Birth_place = $('.Birth_place').val();
+ var gender_choices = $('.gender_choices').val();
+ var address = $('.address').val();
+ var city = $('.city').val();
+ var state_choices = $('.state_choices').val();
+ var zip = $('.zip').val();
+ var mobile = $('.mobile').val();
+ var phone = $('.phone').val();
+ var Nationality = $('.Nationality').val();
+ var mother_tongue = $('.mother_tongue').val();
+ var religion_choices = $('.religion_choices').val();
+ var email = $('.email').val();
+
+ var country = $('.country').val();
+ var National_Identity_card_type = $('.National_Identity_card_type').val();
+ var National_ID_Card_Number = $('.National_ID_Card_Number').val();
+ var blood_choices = $('.blood_choices').val();
+
+
+ var grade = $('.grade').val();
+ var faculty = $('.faculty').val();
+
+
+ var Latest_Qualification = $('.Latest_Qualification').val();
+ var father_Name = $('.father_Name').val();
+ var fathers_Profession = $('.fathers_Profession').val();
+ var Fathers_Contact_Number = $('.Fathers_Contact_Number').val();
+ var Fathers_National_ID_Card_Number = $('.Fathers_National_ID_Card_Number').val();
+
+ var Mother_Name = $('.mother_name').val();
+ var mother_profession = $('.mother_profession').val();
+ var mother_contact_no = $('.mother_contact_no').val();
+ var mother_national_id_card_no = $('.mother_national_id_card_no').val();
+
+ var local_parents_name = $('.local_parents_name').val();
+ var local_parent_profession = $('.local_parent_profession').val();
+ var relationships = $('.relationships').val();
+ var income = $('.income').val();
+
+ var previous_school_name = $('.previous_school_name').val();
+ var previous_school_address = $('.previous_school_address').val();
+ var Latest_Qualification = $('.Latest_Qualification').val();
+ var hostel = $('.hostel').val();
+ var transportation = $('.transportation').val();
+
+
+
+ 
+//This is the Ajax post.Observe carefully. It is nothing but details of where_to_post,what_to_post
+ 
+ $.ajax({
+         url : window.location.href, // the endpoint,commonly same url
+         type : "POST", // http method
+         data : { csrfmiddlewaretoken : csrftoken, 
+         First_Name : First_Name,
+         Middle_Name : Middle_Name,
+         Family_name : Family_name,
+         Birth_place : Birth_place,
+         Date_of_birth : Date_of_birth,
+         gender_choices : gender_choices,
+         address : address,
+         city : city,
+         state_choices : state_choices,
+         zip : zip,
+         mobile : mobile,
+         phone : phone,
+         email : email,
+
+         Nationality : Nationality,
+         mother_tongue : mother_tongue,
+         religion_choices : religion_choices,
+         country : country,
+         National_Identity_card_type : National_Identity_card_type,
+         National_ID_Card_Number : National_ID_Card_Number,
+         blood_choices : blood_choices,
+
+
+         faculty : faculty,
+         grade : grade,
+
+
+         Permanent : Permanent,
+         Latest_Qualification : Latest_Qualification,
+         father_Name : father_Name,
+         fathers_Profession : fathers_Profession,
+         Fathers_Contact_Number : Fathers_Contact_Number,
+         Fathers_National_ID_Card_Number : Fathers_National_ID_Card_Number,
+
+         Mother_Name : mother_name,
+         Mother_contact_no : mother_contact_no,
+         mother_profession : mother_profession,
+         mother_national_id_card_no : mother_national_id_card_no,
+
+         local_parents_name : local_parents_name,
+         local_parent_profession : local_parent_profession,
+         relationships : relationships,
+
+         previous_school_name : previous_school_name,
+         previous_school_address : previous_school_address,
+         Income : income,
+         hostel : hostel,
+         Transportation : transportation
+         
+ }, // data sent with the post request
+
+ // handle a successful response
+ success : function(json) {
+      console.log(json); // another sanity check
+      //On success show the data posted to server as a message
+      alert('recorded success added');
+ },
+
+ // handle a non-successful response
+ error : function(xhr,errmsg,err) {
+ console.log(xhr.status + ": " + xhr.responseText); // provide a bit more info about the error to the console
+ }
+ });
+});
+    </script>
+    <script type="text/javascript" href="http:/cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js"></script>
+</body>
+</html>

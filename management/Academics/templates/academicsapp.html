@@ -1,0 +1,227 @@
+
+{% load staticfiles %}
+
+<html>
+<head>
+	<title>Academic</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	 <style>
+    
+.services {
+  margin: 40px 0;
+}
+
+.service {
+  width: 100%;
+  height: 320px;
+  margin: 35px 0;
+  text-align: center;
+  border: 2px solid #63af10;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: #D6DFE6;
+  opacity: 0.75;
+}
+
+.service .icon-holder {
+  position: relative;
+  top: 100px;
+  display: inline-block;
+  margin-bottom: 40px;
+  padding: 10px;
+ /* background: white;*/
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.service .heading {
+  position: relative;
+  top: 80px;
+  -webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.service .icon-holder > img.icon {
+  width: 80px;
+
+}
+
+.service:hover {
+  border-color: #00a8ff;
+}
+
+.service:hover .icon-holder {
+  top: -30px;
+}
+
+.service:hover .heading {
+  top: -30px;
+}
+
+.service .description {
+  width: 80%;
+  margin: 0 auto;
+  opacity: 0;
+  -webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.service:hover .description {
+  opacity: 2;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+  .bg { 
+    /* The image used */
+    background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(11).jpg");
+
+    /* Half height */
+    /*height: 100%; 
+*/
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+                
+  </style>
+</head>
+  <body>
+  <!--Navigation bar-->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Student Management System</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/">Home</a></li>
+          <li><a href="/admin">Admin</a></li>
+          <li><a href="/student">Student</a></li>
+          <li><a href="/library">Library</a></li>
+          <li><a href="/transport">Transport</a></li>
+          <li><a href="/events">Events</a></li>
+          <li><a href="/hostel">Hostel</a></li>
+          <li><a href="/academics">Academics</a></li>  
+        </ul>
+      </div>
+    </div>
+  </nav>
+ <br><br>
+ <section class="bg">
+  <div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="service">
+            <div class="icon-holder">
+
+              <img src="{% static 'img/student.png' %}" alt="course" class="icon">
+            </div>
+            <a href="/course">
+            <h4 class="heading">Course</h4></a>
+            <p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
+          </div>
+        </div>
+    <div class="col-md-3">
+          <div class="service">
+            <div class="icon-holder">
+              <img src="{% static 'img/batch.png' %}" alt="Batch" class="icon">
+            </div>
+            <a href="/batch">
+            <h4 class="heading">Batch</h4></a>
+            <p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
+          </div>
+        </div>
+      <div class="col-md-3">
+          <div class="service">
+            <div class="icon-holder">
+              <img src="{% static 'img/academic.png' %}" alt="Subject" class="icon">
+            </div>
+            <a href="/subject">
+            <h4 class="heading">Subject</h4></a>
+            <p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="service">
+            <div class="icon-holder">
+              <img src="{% static 'img/exam.png' %}" alt="Exam" class="icon">
+            </div>
+            <a href="/exam">
+            <h4 class="heading">Exam</h4></a>
+            <p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="service">
+            <div class="icon-holder">
+              <img src="{% static 'img/assignment.jpeg' %}" alt="Assignment" class="icon">
+            </div>
+            <a href="/addassignment">
+            <h4 class="heading">Assignment</h4></a>
+            <p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="service">
+            <div class="icon-holder">
+              <img src="{% static 'img/note.png' %}" alt="Note" class="icon">
+            </div>
+            <a href="/notes">
+            <h4 class="heading">Notes</h4></a>
+            <p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="service">
+            <div class="icon-holder">
+              <img src="{% static 'img/certi.png' %}" alt="Certificate" class="icon">
+            </div>
+            <a href="/certificates">
+            <h4 class="heading">Certificate</h4></a>
+            <p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="service">
+            <div class="icon-holder">
+              <img src="{% static 'img/al.png' %}" alt="Alumni" class="icon">
+            </div>
+            <a href="/alumni">
+            <h4 class="heading">Alumni</h4></a>
+            <p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
+          </div>
+
+  </div>
+  </section>
+    <!-- url(r'^addcourse/$',acaview.add_course,name='add_course'),
+      url(r'^addbatch/$',acaview.add_batch,name='add_batch'),
+      url(r'^addsubject/$',acaview.add_subject,name='add_subject'),
+      url(r'^addexam/$',acaview.add_exam,name='add_exam'),
+      url(r'^addassignment/$',acaview.add_assignment,name='add_assignment'),
+      url(r'^addnotes/$',acaview.add_notes,name='add_notes'),
+      url(r'^addcertificates/$',acaview.add_certificate,name='add_certificate'),
+      url(r'^addalumni/$',acaview.add_alumni,name='add_alumni'),
+      url(r'^course/$',acaview.getCourse,name='Course'),
+      url(r'^batch/$',acaview.getBatch,name='Batch'),
+      url(r'^subject/$',acaview.getSubject,name='subject'),
+      url(r'^exam/$',acaview.getExam,name='exam'),
+      url(r'^assignment/$',acaview.getAssignment,name='assignment'),
+      url(r'^notes/$',acaview.getNotes,name='notes'),
+      url(r'^certificates/$',acaview.getCertificate,name='certificate'), -->
+		
+	</body>
+</html>

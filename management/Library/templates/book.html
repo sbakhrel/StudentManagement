@@ -1,0 +1,122 @@
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body >
+{%block home%}
+{%endblock%}
+{% block content %}
+
+<!--Navigation bar-->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Student Management System</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/">Home</a></li>
+          <li><a href="/admin">Admin</a></li>
+          <li><a href="/student">Student</a></li>
+          <li><a href="/library">Library</a></li>
+          <li><a href="/transport">Transport</a></li>
+          <li><a href="/events">Events</a></li>
+          <li><a href="/hostel">Hostel</a></li>
+          <li><a href="/academics">Academics</a></li>  
+        </ul>
+      </div>
+    </div>
+  </nav>
+ <br><br>
+ <br>
+ <br>
+ <div class="container">
+  <div class="row">
+    <!-- <div class='col-md-2'></div> -->
+    <div class='col-md-12'>
+      <p class="bg-info" style='font-size:20px;font-weight:bold;'>
+        <span class="glyphicon glyphicon-th-list"></span>
+        &nbsp;
+        Book List
+        <a href="/addbook" button type="button"  style="float: right" class="btn btn-primary">Add New</button></a>
+      </p>
+    </div>
+    
+  </div>
+		<div class='row'>
+	
+		<div class='col-md-12'>
+		<table class="table table-condensed">
+			<thead>
+		<tr>
+      <!-- temp_dict['Book_Name']= q.Book_Name
+          temp_dict['ISBN_No']=q.ISBN_No
+          temp_dict['Purchase_date']= q.Purchase_date
+          temp_dict['Book_No']=q.Book_No
+          temp_dict['Auther']= q.Auther
+          temp_dict['Edition']=q.Edition
+          temp_dict['Category_Name']= q.Category_Name
+          temp_dict['Publisher']=q.Publisher
+          temp_dict['No_Of_Copies']= q.No_Of_Copies
+          temp_dict['Shelf_No']=q.Shelf_No
+          temp_dict['Book_Cost']= q.Book_Cost
+          temp_dict['Language']=q.Language
+          temp_dict['Condition']= q.Condition -->
+			<th>Book_Name</th>
+      <th>ISBN_No</th>
+      <th>Purchase_date</th>
+      <th>Book_No</th>
+      <th>Auther</th>
+      <th>Edition</th>
+      <th>Category_Name</th>
+      <th>Publisher</th>
+      <th>No_Of_Copies</th>
+      <th>Shelf_No</th>
+      <th>Book_Cost</th>
+      <th>Language</th>
+      <th>Condition</th>
+
+
+
+		</tr>
+			</thead>
+			<tbody>
+			{% for q in query %}
+		<tr>
+
+			<td>{{q.Book_Name}}</td>
+      <td>{{q.ISBN_No}}</td>
+      <td>{{q.Purchase_date}}</td>
+      <td>{{q.Book_No}}</td>
+      <td>{{q.Auther}}</td>
+      <td>{{q.Edition}}</td>
+      <td>{{q.Category_Name}}</td>
+      <td>{{q.Publisher}}</td>
+      <td>{{q.No_Of_Copies}}</td>
+      <td>{{q.Shelf_No}}</td>
+      <td>{{q.Book_Cost}}</td>
+      <td>{{q.Language}}</td>
+      <td>{{q.Condition}}</td>
+
+		</tr>
+		{% endfor %}
+	</tbody>
+
+	</table>
+		</div>
+	</div>
+</div>
+
+
+
+{% endblock %}

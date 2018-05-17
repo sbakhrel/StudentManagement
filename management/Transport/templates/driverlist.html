@@ -1,0 +1,98 @@
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body >
+{%block home%}
+{%endblock%}
+{% block content %}
+
+<!--Navigation bar-->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Student Management System</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/">Home</a></li>
+          <li><a href="/admin">Admin</a></li>
+          <li><a href="/student">Student</a></li>
+          <li><a href="/library">Library</a></li>
+          <li><a href="/transport">Transport</a></li>
+          <li><a href="/events">Events</a></li>
+          <li><a href="/hostel">Hostel</a></li>
+          <li><a href="/academics">Academics</a></li>  
+        </ul>
+      </div>
+    </div>
+  </nav>
+ <br><br>
+ <br>
+ <br>
+ <div class="container">
+	<div class="row">
+		<!-- <div class='col-md-2'></div> -->
+		<div class='col-md-12'>
+			<p class="bg-info" style='font-size:20px;font-weight:bold;'>
+				<span class="glyphicon glyphicon-th-list"></span>
+				&nbsp;
+				Driver List
+				<a href="/adddriver" button type="button"   style="float: right" class="btn btn-primary">Add New</button></a>
+			</p>
+		</div>
+		
+	</div>		
+	<div class='row'>
+		
+		<div class='col-md-10 pull-left'>
+		<table class="table table-condensed">
+			<thead>
+		<tr>
+			<th>Vehicle Number</th>
+      <th>Name</th>
+      <th>Permanent address</th>
+      <th>Present address</th>
+      <th>Date of birth</th>
+      <th>Phone</th>
+      <th>License</th>
+
+		</tr>
+			</thead>
+			<tbody>
+			{% for q in query %}
+		<tr>
+
+			<td>{{q.Vehicle_Number}}</td>
+      <td>{{q.Name}}</td>
+      <td>{{q.Permanent_Address}}</td>
+      <td>{{q.Present_Address}}</td>
+      <td>{{q.Date_of_birth}}</td>
+      <td>{{q.Phone}}</td>
+      <td>{{q.License_Number}}</td>
+
+
+		</tr>
+		{% endfor %}
+	</tbody>
+
+	</table>
+		</div>
+	</div>
+</div>
+
+
+
+{% endblock %}
+</body>
+</html>
